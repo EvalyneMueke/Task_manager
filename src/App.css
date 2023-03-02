@@ -1,38 +1,340 @@
-.App {
+body {
+	background: linear-gradient(-45deg, #f8f546, #abf846, #55c222, #32d523);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.main-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.all-todos-title {
+  text-decoration-line: underline;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.all-todos {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 35%;
+  
+}
+
+.center-text-border {
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.red {
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.orange {
+  color: orange;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.green {
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+
+
+
+
+.flexer {
+  display: flex
+}
+
+.flex {
+  flex: 1
+}
+
+
+
+.main {
+  text-align: center;
+  
+  background-color: #fbfcfa;
+  left: 14%;
+  width: 72%;
+  height: 100%;
+  position: relative;
+  border: 3px solid #bad1ab;
+  border-radius: 2px;
+  box-shadow: 0px 0px 7px black;
+  
+}
+
+.title {
+  border-bottom: 3px solid black;
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
+
+/* .third-line {
+  display: inline-block;
+} */
+
+.organize {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.dropdown {
+  position: sticky;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 3px solid red;
+  height: 30px; */
+  width: 100%;
+  /* height: 200px; */
+  flex:1;
+  /* padding-left: 1px;
+  padding-right: 3px; */
+  /* border: 3px solid red; */
+  
+}
+
+.info {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 4px ridge #bad1ab;
+  margin-bottom: 1px;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  /* background-color: #a1eb73; */
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  
+}
+
+.the-list {
+  width: 100%;
+}
+.search div {
+  background-color: #a1eb73;
+  /* border-radius: 3px; */
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 3px;
+  border: 2px solid #bad1ab;
+  /* vertical-align: middle; */
+  /* line-height: 40px;   */
+  /* width: 100%; */
+  /* height: 20%; */
+  /* margin: auto; */
+}
+
+
+.select {
+  background-color: #ffed4b;
+  box-shadow: 0px 0px 2px;
+ 
+  border-radius: 3px;
+  position: relative;
+  width: 100%;
+  /* border-top: 2px solid #bad1ab */
+}
+
+.add-forum input {
+  width: 60%;
+  background-color: whitesmoke;
+  margin: 3px;
+}
+
+.importance {
+  width: 30%;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  box-shadow: 0px 0px 3px;
+  border-radius: 2px;
+  background-color: #fdcd3b;
+}
+
+.category {
+  width: 30%;
+  box-shadow: 0px 0px 3px;
+  border-radius: 2px;
+  background-color: #fdcd3b;
+}
+
+
+
+.edit-forum input {
+  width: 90%;
+  background-color: whitesmoke;
+  margin: 3px;
+}
+
+.importance2 {
+  width: 45%;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  box-shadow: 0px 0px 3px;
+  border-radius: 2px;
+}
+
+.category2 {
+  width: 45%;
+  box-shadow: 0px 0px 3px;
+  border-radius: 2px;
+}
+
+
+
+
+.searchbar input {
+  width: 50%;
+  background-color: whitesmoke;
+}
+
+.searchbar #enter {
+  width:23%
+}
+.searchbar #reset {
+  width: 23%
+}
+#todos-cat {
+  padding-left: 0%;
+  width: 80%;
+}
+
+.todo {
+  border: 3px dashed rgba(0, 0, 0, 0.089);
+  background-color: #cccccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 10px
+ 
+
+}
+
+#high {
+  border: 2px dotted red;
+  background-color: rgb(245, 157, 157);
+  border-radius: 4px;
+  
+  
+}
+
+#high .btn {
+  background-color: pink;
+}
+
+#medium {
+  border: 2px dotted orange;
+  background-color: rgb(250, 208, 129);
+  border-radius: 4px;
+  
+  
+}
+
+#medium .btn {
+  background-color: rgb(245, 223, 182);
+}
+
+#low {
+  border: 2px dotted green;
+  background-color: rgb(169, 253, 169);
+  border-radius: 4px; 
+}
+
+#low .btn {
+  background-color: aquamarine;
+}
+
+.item-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.new-todo {
+  width: 100%;
+  top: 180px;
+  position: absolute;
+}
+
+.list {
+  width: 50%;
+  display: inline-block;
+  
+  overflow: visible;
+  
+}
+
+
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.btn {
+  border-radius: 10%;
+  background-color: #ffed4b;
+  
+  cursor: pointer;
+  
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 3px black;
+}
+
+.btn:active {
+  box-shadow: 0px 0px 5px white;
+ 
+}
+
+.trash {
+  cursor: pointer;
+}
+
+.trash:active {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#edit {
+  margin-bottom: 5px;
 }

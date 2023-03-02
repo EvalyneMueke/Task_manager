@@ -1,7 +1,7 @@
 import './App.css'
 import React, { useEffect, useState } from 'react'
 import ItemList from './Components/ItemList'
-import NewTask from './Components/NewTask'
+// import NewTask from './Components/NewTask'
 import Header from './Components/Header'
 
 
@@ -31,7 +31,7 @@ function App() {
         return task;
       }
     });
-    setTodos(updatedTasks);
+    setTasks(updatedTasks);
   }
 
   return (

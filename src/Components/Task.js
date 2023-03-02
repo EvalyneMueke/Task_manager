@@ -9,7 +9,7 @@ function Task({task, onTaskDelete, onUpdateTask}) {
     }
 
     function handleDeleteClick() {
-        fetch(`http://localhost:9292/tasks/${todo.id}`, {
+        fetch(`http://localhost:9292/tasks/${task.id}`, {
           method: "DELETE",
         })
         onTaskDelete(task.id)

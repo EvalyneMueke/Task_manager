@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React, { useEffect, useState } from 'react'
+import ItemList from './Components/ItemList'
+import NewTask from './Components/NewTask'
+import Header from './Components/Header'
+
 
 function App() {
+  const [tasks,setTasks] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:9292/tasks')
+    .then(r => r.json())
+    .then(tasks =>setTasks(tasks))
+  }, [])
+
+  function handleAddTask(newTask) {
+    setTasks([...tasks, newTask])
+  }
+
+  const handleDeleteItem = (id) => {
+    const finalTasks = tasks.filter(task => task.id !== id)
+    setTasks(finalTasks)
+  }
+
+  function handleUpdateTask(updatedTaskObj) {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === updatedTaskObj.id) {
+        return updatedTaskObj;
+      } else {
+        return task;
+      }
+    });
+    setTodos(updatedTasks);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <div className="main">
+     <Header tasks={tasks} onTaskDelete={handleDeleteItem}/>
+     <ItemList onAddTask={handleAddTask} tasks={tasks} onTaskDelete={handleDeleteItem} onUpdateTask={handleUpdateTask}/>
+     <br/><br/>
+   </div>
+  )
 }
 
 export default App;

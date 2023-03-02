@@ -76,4 +76,4 @@ function NewTask({onAddTask}) {
     )
 }
 
-export default NewTodo
+export default NewTask

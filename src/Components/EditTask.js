@@ -42,9 +42,9 @@ function EditTask({onUpdateTask, task}) {
 
         <select className='importance2'  onChange={(e) => setImportance(e.target.value)}>
           <option value={importance}>Update Importance</option>
-          <option value="1. high">High</option>
-          <option value="2. medium">Medium</option>
-          <option value="3. low">Low</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
         </select>
         <select className='category2' onChange={(e) => setCategoryId(e.target.value)}>
           <option value={category_id}>Update Category</option>

@@ -25,11 +25,11 @@ function Task({task, onTaskDelete, onUpdateTask}) {
     }
 
     function idName() {
-        if (task.importance == "1. high") {
+        if (task.importance == "high") {
             return 'high'
-        } else if (task.importance == "2. medium") {
+        } else if (task.importance == "medium") {
             return 'medium'
-        } else if(task.importance == "3. low") {
+        } else if(task.importance == "low") {
             return 'low'
         }
     }

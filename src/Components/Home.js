@@ -9,11 +9,11 @@ function Home() {
     <div>
         <BrowserRouter>
         <Routes>
-            <Route path="/" element={<LogIn />} />
+            <Route path="/" element={<LogIn/>} />
             <Route path="/dashboard" element={<App/>}/>
 
         </Routes>
-        <navlink><Link to="/home">Dashboard</Link></navlink>
+        
    </BrowserRouter> 
    </div>
   )

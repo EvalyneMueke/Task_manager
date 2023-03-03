@@ -11,12 +11,12 @@ function TaskList({task, onTaskDelete}) {
     
     return (
         <div className='all-todos'>
-            {task.importance == "1. high" ? (
-                <li className="red"><button className='trash' onClick={handleDeleteClick}>❌</button>{task.item.toLowerCase()} </li>
-            ) : task.importance == "2. medium" ? (
-                <li className="orange"><button className='trash' onClick={handleDeleteClick}>❌</button>{task.item.toLowerCase()} </li>
-            ) : task.importance == "3. low" ? (
-                <li className="green" ><button className='trash' onClick={handleDeleteClick}>❌</button>{task.item.toLowerCase()} </li> 
+            {task.importance == "high" ? (
+                <li className="red">{task.item.toLowerCase()} </li>
+            ) : task.importance == "medium" ? (
+                <li className="orange">{task.item.toLowerCase()} </li>
+            ) : task.importance == "low" ? (
+                <li className="green" >{task.item.toLowerCase()} </li> 
             ) : (
                 <li>{task.item.toLowerCase()}</li> 
             )}
